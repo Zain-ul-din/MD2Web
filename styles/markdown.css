@@ -145,9 +145,10 @@ th {
 }
 
 img {
-  max-width: 100%; /* Ensure images don't exceed their container width */
-  height: auto; /* Maintain the aspect ratio of the images */
-  border-radius: 4px; /* Add a rounded border to the images */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for a lifted effect */
-  margin: 10px 0; /* Provide some spacing around the images */
+  display: inline-block;
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 4px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin: 10px 0; 
 }
