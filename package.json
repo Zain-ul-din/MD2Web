@@ -1,0 +1,20 @@
+{
+  "name": "markdown-to-html",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --exec \"vite-node ./src/index.ts\" -e md,ts,css",
+    "start": "serve ./templates/",
+    "build": "vite-node ./src/index.ts"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "serve": "^14.2.1",
+    "vite-node": "^0.34.6"
+  },
+  "dependencies": {
+    "marked": "^11.0.0"
+  }
+}

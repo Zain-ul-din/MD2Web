@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Playfair+Display:700i,900');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 5% 3% 5%;
+  background-color: white;
+}
+
+h1,
+h2,
+p,
+i,
+a,
+.first-letter,
+.authorName a {
+  color: rgba(0, 0, 0, 0.84);
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  text-align: left;
+  margin: 2rem 0rem 2rem 0rem;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+p, i, a {
+  margin-top: 21px;
+  font-family: "Lora";
+  font-size: 1.2rem;
+  letter-spacing: -0.03px;
+  line-height: 1.58;
+  width: 100%;
+}
+
+ul, ol {
+  margin: 0rem 1rem 0rem 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+li {
+  font-family: "Lora";
+  font-size: 1.1rem;
+  letter-spacing: -0.03px;
+  line-height: 1.58;
+  width: 100%;
+}
+
+ol > li {
+  margin-left: 0.3rem;
+}
+
+a {
+  text-decoration: underline;
+}
+
+blockquote {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-style: italic;
+  line-height: 44.4px;
+  overflow-wrap: break-word;
+  /* text-align: center; */
+  color: rgba(0, 0, 0, 0.68);
+  margin: 1rem 0rem 1rem 0rem;
+  border-left: 0.3rem solid #333;
+  font-weight: 800;
+  padding: 0.2rem 0rem 0.2rem 0rem;
+  background-color: rgba(170, 170, 171, 0.114);
+}
+
+blockquote > p {
+  margin: 0;
+  padding: 0;
+  padding-left: 0.5rem;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+code {
+  font-size: 18px;
+  background: rgba(0,0,0,.05);
+  border-radius: 2px;
+  padding: 3px 5px;
+  margin: 1rem 0.2rem 1rem 0.2rem;
+  display: inline-block;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #333;
+  text-align: center;
+  position: relative;
+}
+
+
+th,
+td {
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+td {
+  font-family: "Lora";
+  font-size: 1rem;
+}
+
+th {
+  font-family: "Lato", sans-serif;
+  background-color: rgba(170, 170, 171, 0.114);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%; /* Ensure images don't exceed their container width */
+  height: auto; /* Maintain the aspect ratio of the images */
+  border-radius: 4px; /* Add a rounded border to the images */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for a lifted effect */
+  margin: 10px 0; /* Provide some spacing around the images */
+}

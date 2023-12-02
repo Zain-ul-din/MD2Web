@@ -1,0 +1,10 @@
+/node_modules
+
+# dist folder output of markdown files
+/templates
+
+# markdown files
+/markdowns
+
+# environment variables
+.env
