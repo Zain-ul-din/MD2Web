@@ -19,13 +19,7 @@ body {
   background-color: white;
 }
 
-h1,
-h2,
-p,
-i,
-a,
-.first-letter,
-.authorName a {
+h1,h2,p,i,a {
   color: rgba(0, 0, 0, 0.84);
   text-rendering: optimizeLegibility;
 }
@@ -113,9 +107,7 @@ code {
 }
 
 
-table {
-  border-collapse: collapse;
-}
+table { border-collapse: collapse; }
 
 table,
 th,
