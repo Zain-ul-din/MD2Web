@@ -10,6 +10,7 @@
     "build": "vite-node ./src/index.ts"
   },
   "devDependencies": {
+    "@types/node": "^20.10.2",
     "nodemon": "^3.0.2",
     "serve": "^14.2.1",
     "vite-node": "^0.34.6"
