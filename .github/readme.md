@@ -5,6 +5,7 @@ A simple compiler that converts markdown files to html.
 <img
     src="./static/markdown-to-html-demo.jpg"
     alt="demo img"
+    style="border-radius: 0.5rem;"
 />
 
 ## Usage
