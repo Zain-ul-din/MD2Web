@@ -1,7 +1,7 @@
 /node_modules
 
 # dist folder output of markdown files
-/templates
+/public
 
 # markdown files
 /markdowns

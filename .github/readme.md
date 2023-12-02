@@ -25,5 +25,5 @@ A simple compiler that converts markdown files to html.
 
 - install dependencies `npx yarn`
 - run application `npx yarn dev`
-- install `live server` extension in VS code and open html file (inside templates folder) with live server.
+- install `live server` extension in VS code and open html file (inside public folder) with live server.
 
