@@ -5,17 +5,20 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --exec \"vite-node ./src/index.ts\" -e md,ts,css",
+    "dev": "nodemon --exec \"vite-node ./src/index.ts & prettier --write ./public\" -e md,ts,css",
     "start": "serve ./public/",
-    "build": "vite-node ./src/index.ts"
+    "build": "npx yarn & vite-node ./src/index.ts",
+    "format": "prettier --write ./public"
   },
   "devDependencies": {
     "@types/node": "^20.10.2",
     "nodemon": "^3.0.2",
+    "prettier": "^3.1.0",
     "serve": "^14.2.1",
     "vite-node": "^0.34.6"
   },
   "dependencies": {
+    "front-matter": "^4.0.2",
     "marked": "^11.0.0"
   }
 }
