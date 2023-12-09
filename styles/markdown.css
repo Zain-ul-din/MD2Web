@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Playfair+Display:700i,900');
 
+:root {
+  --bg-color: white;
+  --light-bg-color: rgba(170, 170, 171, 0.114);
+
+  --border-color: #333;
+  --light-border-color: rgba(0, 0, 0, 0.1);
+  --text-color: rgba(0, 0, 0, 0.84);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,11 +25,11 @@ body {
   justify-content: center;
   align-items: center;
   padding: 3% 5%;
-  background-color: white;
+  background-color: var(--bg-color);
 }
 
 h1,h2,p,i,a {
-  color: rgba(0, 0, 0, 0.84);
+  color: var(--text-color);
   text-rendering: optimizeLegibility;
 }
 
@@ -36,6 +45,34 @@ h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 1rem 0rem 1rem 0rem;
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+h4 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+h5 {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+h6 {
+  font-family: "Lato", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0.5rem 0rem 0.5rem 0rem;
 }
 
 p, i, a {
@@ -79,12 +116,12 @@ blockquote {
   line-height: 44.4px;
   overflow-wrap: break-word;
   /* text-align: center; */
-  color: rgba(0, 0, 0, 0.68);
+  color: var(--text-color);
   margin: 1rem 0rem 1rem 0rem;
-  border-left: 0.3rem solid #333;
+  border-left: 0.3rem solid var(--border-color);
   font-weight: 800;
   padding: 0.2rem 0rem 0.2rem 0rem;
-  background-color: rgba(170, 170, 171, 0.114);
+  background-color: var(--light-bg-color);
 }
 
 blockquote > p {
@@ -99,9 +136,11 @@ pre {
 
 code {
   font-size: 18px;
-  background: rgba(0,0,0,.05);
+  background: var(--light-bg-color);
   border-radius: 2px;
-  padding: 3px 5px;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid var(--light-border-color);
+  border-radius: 0.5rem;
   margin: 1rem 0.2rem 1rem 0.2rem;
   display: inline-block;
 }
@@ -112,7 +151,7 @@ table { border-collapse: collapse; }
 table,
 th,
 td {
-  border: 1px solid #333;
+  border: 1px solid var(--border-color);
   text-align: center;
   position: relative;
 }
@@ -131,7 +170,7 @@ td {
 
 th {
   font-family: "Lato", sans-serif;
-  background-color: rgba(170, 170, 171, 0.114);
+  background-color: var(--light-bg-color);
   font-size: 1rem;
   font-weight: 700;
 }
@@ -141,6 +180,6 @@ img {
   max-width: 100%; 
   height: auto; 
   border-radius: 4px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 4px var(--light-border-color); 
   margin: 10px 0; 
 }
