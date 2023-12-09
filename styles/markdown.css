@@ -1,18 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Playfair+Display:700i,900');
 
-:root {
-  --bg-color: white;
-  --light-bg-color: rgba(170, 170, 171, 0.114);
 
-  --border-color: #333;
-  --light-border-color: rgba(0, 0, 0, 0.1);
-  --text-color: rgba(0, 0, 0, 0.84);
+@media (prefers-color-scheme: dark) {
+  /* dark-theme */
+  :root {
+    --bg-color: #000000;
+    --light-bg-color: #111;
+    
+    --border-color: rgba(255,255,255,0.1);
+    --light-border-color: rgba(255,255,255,0.1);
+  
+    --text-color: #ffff;
+    --selection-color: rgb(250, 79, 165);
+  }
 }
+
+@media (prefers-color-scheme: light) {
+  /* light-theme */
+  :root {
+    --bg-color: white;
+    --light-bg-color: rgba(170, 170, 171, 0.114);
+    
+    --border-color: #333;
+    --light-border-color: rgba(0, 0, 0, 0.1);
+    
+    --text-color: rgba(0, 0, 0, 0.84);
+    --selection-color: rgba(137, 176, 248, 0.5);
+  }
+}
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--text-color);
+}
+
+*::selection {
+  background-color: var(--selection-color);
 }
 
 html {
