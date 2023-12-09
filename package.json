@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon --exec \"vite-node ./src/index.ts\" -e md,ts,css",
-    "start": "serve ./templates/",
+    "start": "serve ./public/",
     "build": "vite-node ./src/index.ts"
   },
   "devDependencies": {
