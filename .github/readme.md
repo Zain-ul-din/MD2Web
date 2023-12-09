@@ -28,3 +28,13 @@ A simple compiler that converts markdown files to html.
 - run application `npx yarn dev`
 - install `live server` extension in VS code and open html file (inside public folder) with live server.
 
+## Intermediate Usage
+
+- To add title and description to page add following code on the top of markdown fil
+
+```.md
+---
+title: Operating System Notes
+description: My Operating System Notes
+---
+```
