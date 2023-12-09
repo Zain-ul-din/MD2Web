@@ -30,7 +30,7 @@ A simple compiler that converts markdown files to html.
 
 ## Intermediate Usage
 
-- To add title and description to page add following code on the top of markdown fil
+- To add title and description to page add following code on the top of markdown file
 
 ```.md
 ---
