@@ -2,6 +2,7 @@ import { readFileSync } from "fs";
 
 export type HTMLTemplateProps = {
     title?: string;
+    description?: string;
     content?: string;
     /**
      * path should relative to `src` directory if using `internal` css else path
@@ -16,7 +17,7 @@ export type HTMLTemplateProps = {
 } 
 
 export default function HTMLTemplate (
-    { title, content, styleSheetPaths, linkCSS }: HTMLTemplateProps
+    { title, description, content, styleSheetPaths, linkCSS }: HTMLTemplateProps
 ) {
     return `
 <!DOCTYPE html>
@@ -25,6 +26,7 @@ export default function HTMLTemplate (
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title || 'Notes'}</title>
+  <meta name="description" content="${description || ""}" />
   ${ 
     linkCSS === "internal" ?
     styleSheetPaths.map(path=> `<style>${readFileSync(path, "utf-8")}</style>`) :
