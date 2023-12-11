@@ -1,23 +1,26 @@
 import { readFileSync } from "fs";
+import { Theme } from "../../configType";
+import config from "../../config";
 
 export type HTMLTemplateProps = {
-    title?: string;
-    description?: string;
-    content?: string;
-    /**
-     * path should relative to `src` directory if using `internal` css else path
-     * should be relative `templates` directory
-    */
-    styleSheetPaths: string[],
-    /**
-     * @option internal - include css file with style tag as internal css
-     * @option external - just include css file path using link tag 
-    */
-    linkCSS: "internal" | "external"
+  title?: string;
+  description?: string;
+  content?: string;
+  theme?: keyof Theme;
+  /**
+   * path should relative to `src` directory if using `internal` css else path
+   * should be relative `templates` directory
+  */
+  styleSheetPaths: string[],
+  /**
+   * @option internal - include css file with style tag as internal css
+   * @option external - just include css file path using link tag 
+  */
+  linkCSS: "internal" | "external"
 } 
 
 export default function HTMLTemplate (
-    { title, description, content, styleSheetPaths, linkCSS }: HTMLTemplateProps
+    { title, description, content, theme, styleSheetPaths, linkCSS }: HTMLTemplateProps
 ) {
     return `
 <!DOCTYPE html>
@@ -27,6 +30,9 @@ export default function HTMLTemplate (
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title || 'Notes'}</title>
   <meta name="description" content="${description || ""}" />
+  <style>
+  ${addCSSVariables(theme)}
+  </style>
   ${ 
     linkCSS === "internal" ?
     styleSheetPaths.map(path=> `<style>${readFileSync(path, "utf-8")}</style>`) :
@@ -40,4 +46,26 @@ ${content}
 </body>
 </html>    
 `
+}
+
+
+const addCSSVariables = (theme?: keyof Theme)=> {
+
+  const themeToCSSVariables = (obj: Record<string, string>) => `
+    :root {
+      ${Object.entries(obj).map(([name, val])=>{
+        return `${name}: ${val};\n`
+      }).join("\n")}
+    }
+  `
+
+  if(config.theme[theme || Number.NEGATIVE_INFINITY] == undefined) {
+    return `
+      @media (prefers-color-scheme: dark) { ${themeToCSSVariables(config.theme[config.theme.system.dark])} }
+      @media (prefers-color-scheme: light) { ${themeToCSSVariables(config.theme[config.theme.system.light])} }
+
+    `
+  }
+
+  return themeToCSSVariables(config.theme[theme as string]);
 }

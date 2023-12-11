@@ -1,35 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Playfair+Display:700i,900');
 
-
-@media (prefers-color-scheme: dark) {
-  /* dark-theme */
-  :root {
-    --bg-color: #000000;
-    --light-bg-color: #111;
-    
-    --border-color: rgba(255,255,255,0.1);
-    --light-border-color: rgba(255,255,255,0.1);
-  
-    --text-color: #ffff;
-    --selection-color: rgb(250, 79, 165);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  /* light-theme */
-  :root {
-    --bg-color: white;
-    --light-bg-color: rgba(170, 170, 171, 0.114);
-    
-    --border-color: #333;
-    --light-border-color: rgba(0, 0, 0, 0.1);
-    
-    --text-color: rgba(0, 0, 0, 0.84);
-    --selection-color: rgba(137, 176, 248, 0.5);
-  }
-}
-
-
 * {
   margin: 0;
   padding: 0;
@@ -50,85 +20,74 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 3% 5%;
+  padding: 3% 2%;
   background-color: var(--bg-color);
 }
 
-h1,h2,p,i,a {
+main {
+  width: 100%;
+  height: 100%;
+}
+
+h1,h2,h2, h3, h5, h4,p,i,a {
   color: var(--text-color);
   text-rendering: optimizeLegibility;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+h1, h2 {
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   text-align: left;
-  margin: 2rem 0rem 2rem 0rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.3rem;
 }
 
 h2 {
-  font-family: "Lato", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 1rem 0rem 1rem 0rem;
+  font-size: 2rem;
 }
 
-h3 {
+h3, h4, h5, h6 {
   font-family: "Lato", sans-serif;
-  font-size: 1.3rem;
   font-weight: 700;
-  margin: 1rem 0rem 1rem 0rem;
 }
 
 h4 {
-  font-family: "Lato", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 1rem 0rem 1rem 0rem;
+  font-size: 1rem;
 }
 
 h5 {
-  font-family: "Lato", sans-serif;
   font-size: 1rem;
-  font-weight: 700;
-  margin: 1rem 0rem 1rem 0rem;
 }
 
 h6 {
-  font-family: "Lato", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin: 0.5rem 0rem 0.5rem 0rem;
+  font-size: .85em;
+  color: var(--muted-text-color);
 }
 
-p, i, a {
-  margin-top: 21px;
+p, i, a, strong {
   font-family: "Lora";
-  font-size: 1.2rem;
-  letter-spacing: -0.03px;
-  line-height: 1.58;
+  font-size: 1rem;
+  margin-bottom: 16px;
   width: 100%;
+  line-height: 1.7em;
 }
+
+
 
 ul, ol {
-  margin: 0rem 1rem 0rem 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  padding-left: 2em;
 }
 
 li {
   font-family: "Lora";
-  font-size: 1.1rem;
-  letter-spacing: -0.03px;
-  line-height: 1.58;
-  width: 100%;
-}
-
-ol > li {
-  margin-left: 0.3rem;
+  font-size: 16px;
+  margin-top: 0.25em;
+  line-height: 1.5;
 }
 
 a {
@@ -137,17 +96,18 @@ a {
 
 blockquote {
   font-family: "Playfair Display", serif;
+  padding: 0 1em;
   font-size: 30px;
   font-style: italic;
   line-height: 44.4px;
   overflow-wrap: break-word;
   /* text-align: center; */
   color: var(--text-color);
-  margin: 1rem 0rem 1rem 0rem;
   border-left: 0.3rem solid var(--border-color);
   font-weight: 800;
   padding: 0.2rem 0rem 0.2rem 0rem;
   background-color: var(--light-bg-color);
+  margin-bottom: 16px;
 }
 
 blockquote > p {
@@ -156,19 +116,35 @@ blockquote > p {
   padding-left: 0.5rem;
 }
 
-pre {
-  white-space: pre-wrap;
-}
+
+
 
 code {
   font-size: 18px;
   background: var(--light-bg-color);
   border-radius: 2px;
-  padding: 0.5rem 0.5rem;
+  line-height: 22px;
+  padding: 0rem 0.2rem;
   border: 1px solid var(--light-border-color);
   border-radius: 0.5rem;
-  margin: 1rem 0.2rem 1rem 0.2rem;
   display: inline-block;
+}
+
+pre {
+  white-space: pre-wrap;
+  background: var(--light-bg-color) !important;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px var(--code-border-style) var(--border-color);
+  margin-bottom: 12px;
+}
+
+pre > code {
+  font-size: 1rem;
+  color: var(--text-color);
+  background: transparent !important;
+  display: inline-block;
+  border: none !important;
 }
 
 
@@ -186,7 +162,6 @@ td {
 th,
 td {
   padding: 0.5rem;
-  border-radius: 1rem;
 }
 
 td {
@@ -207,5 +182,4 @@ img {
   height: auto; 
   border-radius: 4px; 
   box-shadow: 0 2px 4px var(--light-border-color); 
-  margin: 10px 0; 
 }

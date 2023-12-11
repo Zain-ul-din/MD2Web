@@ -20,6 +20,7 @@ markDownFiles.forEach(async file=> {
     writeFileSync(`${PUBLIC_DIR}/${file.replace(".md",".html")}`, HTMLTemplate({
         title: metaData.title, 
         description: metaData.description,
+        theme: metaData.theme,
         content: (await marked.parse(mdContent.replace(/---[\s\S]*?---/, ""))), 
         styleSheetPaths: STYLE_SHEET_PATHS,
         linkCSS: "internal"

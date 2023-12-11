@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --exec \"vite-node ./src/index.ts & prettier --write ./public\" -e md,ts,css",
+    "dev": "nodemon --exec \"vite-node ./src/index.ts\" -e md,ts,css",
     "start": "serve ./public/",
     "build": "npx yarn & vite-node ./src/index.ts",
     "format": "prettier --write ./public"

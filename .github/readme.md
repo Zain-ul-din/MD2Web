@@ -36,5 +36,36 @@ A simple compiler that converts markdown files to html.
 ---
 title: Operating System Notes
 description: My Operating System Notes
+theme: dark | light | <default: system>
 ---
 ```
+
+## Advance Usage
+
+By default, the `config.ts` file contains two themes. To add a new theme, follow these steps:
+
+- Open `Config.d.ts` and include the theme name in the `Theme` type. For example, add `neon: CSSVariables`.
+
+- Open `config.ts` and insert the CSS variables for the new theme using key-value pairs. Update the theme object as follows:
+
+```typescript
+    const theme: Theme = {
+        ...,
+        neon: {
+            ...
+        }
+    }
+```
+
+**Applying Theme**
+
+- By default, theme is set to system preferences. to apply the new theme, include it in the markdown head section like this:
+
+```md
+---
+...
+theme: neon
+---
+```
+
+-----------------
