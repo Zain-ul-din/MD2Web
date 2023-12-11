@@ -43,7 +43,7 @@ description: My Operating System Notes
 
 # Advance Usage
 
-## Add custom theme
+### Add custom theme
 
 By default, the `config.ts` file contains two themes. To add a new theme, follow these steps:
 
