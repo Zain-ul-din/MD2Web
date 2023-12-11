@@ -28,7 +28,9 @@ A simple compiler that converts markdown files to html.
 - run application `npx yarn dev`
 - install `live server` extension in VS code and open html file (inside public folder) with live server.
 
-## Intermediate Usage
+# Intermediate Usage
+
+### Add Meta tags
 
 - To add title and description to page add following code on the top of markdown file
 
@@ -36,11 +38,12 @@ A simple compiler that converts markdown files to html.
 ---
 title: Operating System Notes
 description: My Operating System Notes
-theme: dark | light | <default: system>
 ---
 ```
 
-## Advance Usage
+# Advance Usage
+
+## Add custom theme
 
 By default, the `config.ts` file contains two themes. To add a new theme, follow these steps:
 
