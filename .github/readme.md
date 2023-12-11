@@ -53,7 +53,7 @@ By default, the `config.ts` file contains two themes. To add a new theme, follow
 
 ```typescript
     const theme: Theme = {
-        ...,
+        ...
         neon: {
             ...
         }
