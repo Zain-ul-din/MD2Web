@@ -8,6 +8,10 @@ A simple compiler that converts markdown files to html.
     style="border-radius: 0.5rem;"
 />
 
+## Motivation 🔥
+
+Often, we find ourselves needing to download MS Word or other software to create assignments, but using these can be a daunting task. If you're someone who prefers not to waste time and resources downloading third-party software and wants to enhance productivity with minimal effort, this tool can assist you in generating documents directly from markdown.
+
 ## Usage
 
 - create folder `markdowns` in root directory.
